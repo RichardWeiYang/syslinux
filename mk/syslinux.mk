@@ -41,7 +41,7 @@ NASM	 = nasm
 NASMOPT  = -Ox $(DEBUGOPT)
 
 PERL	 = perl
-PYTHON	 = python
+PYTHON	 = python3
 UPX	 = upx
 
 CHMOD	 = chmod
