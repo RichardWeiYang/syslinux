@@ -7,7 +7,7 @@ core = $(topdir)/core
 # Set up architecture specifics; for cross compilation, set ARCH as apt
 # gnuefi sets up architecture specifics in ia32 or x86_64 sub directories
 # set up the LIBDIR and EFIINC for building for the appropriate architecture
-GCCOPT := $(call gcc_ok,-fno-stack-protector,)
+GCCOPT := $(call gcc_ok,-fno-stack-protector,) $(call gcc_ok,-fcommon)
 EFIINC = $(objdir)/include/efi
 LIBDIR  = $(objdir)/lib
 
