@@ -52,7 +52,7 @@ int new_linux_kernel(char *okernel, char *ocmdline)
 		opt_quiet = true;
 
 	if (!opt_quiet)
-		printf("Loading %s... ", kernel_name);
+		printf("Loading ldlinux %s... ", kernel_name);
 
 	if (loadfile(kernel_name, &kernel_data, &kernel_len)) {
 		if (opt_quiet)
@@ -62,7 +62,7 @@ int new_linux_kernel(char *okernel, char *ocmdline)
 	}
 
 	if (!opt_quiet)
-		printf("ok\n");
+		printf("ok ldlinux \n");
 
 	/* Find and load initramfs */
 	temp = strstr(cmdline, "initrd=");
