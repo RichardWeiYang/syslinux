@@ -505,6 +505,8 @@ int bios_boot_linux(void *kernel_buf, size_t kernel_size,
 	dprintf("*** vga=current, not calling syslinux_force_text_mode()...\n");
     }
 
+    printf("real_mode_base adjusted 0x%zx\n", real_mode_base);
+    printf("prot_mode_base adjusted 0x%zx\n", prot_mode_base);
     syslinux_shuffle_boot_rm(fraglist, mmap, bootflags, &regs);
     dprintf("shuffle_boot_rm failed\n");
 
